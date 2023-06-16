@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+/**
+ * main - runs code inside it.
+ * Return: indication of successful output.
+ */
+int main(void)
+{
+int i;
+char a;
+for (i = 48; i <= 57; i++)
+{
+putchar(i);
+}
+for (a = 'a'; i <= 'f'; a++)
+{
+putchar(a);
+}
+putchar('\n');
+return (0);
+}
