@@ -8,7 +8,7 @@
 */
 void rev_string(char *s)
 {
-char* ps = s;
+char *ps = s;
 
 int largest_index = strlen(s) - 1;
 int i = largest_index;
