@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include "main.h"
+
+void print_array(int *a, int n)
+{
+int digit;
+int i;  
+for (i = 0; i < n; i++)
+{
+int num = a[i];
+int digits = 0;
+int temp = num;
+
+
+while (temp != 0)
+{
+digits++;
+temp /= 10;
+}
+
+
+while (digits > 0)
+{
+int divisor = 1;
+int j;
+for (j = 1; j < digits; j++)
+{
+divisor *= 10;
+}
+digit = num / divisor;
+putchar(digit + '0');
+num %= divisor;
+digits--;
+}
+
+if (i != n - 1)
+{
+putchar(',');
+putchar(' ');
+}
+}
+putchar('\n');
+}
