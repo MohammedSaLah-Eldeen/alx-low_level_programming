@@ -12,10 +12,10 @@ void puts2(char *str)
 {
 int largest_index = strlen(str) - 1;
 int i;
- 
+
 for (i = 0; i <= largest_index; i++)
 {
-if ( i % 2 == 0)
+if (i % 2 == 0)
 {
 putchar(*(str + i));
 }
