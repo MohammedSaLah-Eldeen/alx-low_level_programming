@@ -1,0 +1,12 @@
+#include "main.h"
+
+/**
+ *reverse_array - function that compares two strings.
+ *@a: pointer caracter
+ *@n: integer
+ *Return: integer of pointer type
+ */
+void reverse_array(int *a, int n)
+{
+
+}
