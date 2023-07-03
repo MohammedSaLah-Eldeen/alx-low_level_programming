@@ -19,7 +19,6 @@ for (i = 0; i < len; i++)
 if (*(ps + i) == c)
 {
 return ((ps + i));
-break;
 }
 }
 return (NULL);
