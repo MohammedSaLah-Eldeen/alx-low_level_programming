@@ -12,7 +12,7 @@ char *_strchr(char *s, char c)
 {
 int len = strlen(s);
 int i;
-char* ps = s;
+char *ps = s;
 
 for (i = 0; i < len; i++)
 {
