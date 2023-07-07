@@ -14,9 +14,9 @@ while (*s != 0)
 {
 sum = atoi(s + '0');
 s++;
-printf ("sum = %d\n", sum);
+printf("sum = %d\n", sum);
 }
-printf ("sum = %d\n", sum);
+printf("sum = %d\n", sum);
 
 
 return (0);
