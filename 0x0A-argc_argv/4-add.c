@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+
 
 /**
 * main - adds positive numbers.
@@ -9,33 +9,28 @@
 *
 * Return: 0
 */
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-int res = 0;
-int i;
-int n;
+int i, n, sum = 0;
+char *endptr;
 
-if (argc == 1)
+if (argc < 2)
 {
-printf("%d\n", 0);
+printf("0\n");
+return (0);
 }
-else
-{
+
 for (i = 1; i < argc; i++)
 {
-n = atoi(argv[i]);
-if (n == 0 && *argv[i] != '0')
+n = strtol(argv[i], &endptr, 10);
+if (*endptr != '\0')
 {
 printf("Error\n");
 return (1);
 }
-res += n;
+sum += n;
 }
-printf("%d\n", res);
-}
+
+printf("%d\n", sum);
 return (0);
 }
