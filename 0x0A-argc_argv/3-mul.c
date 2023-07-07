@@ -8,26 +8,19 @@
 *
 * Return: 0
 */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-int n1, n2;
-char *endptr1;
-char *endptr2;
+int x, y;
+
 if (argc < 3)
 {
 printf("Error\n");
 return (1);
 }
 
-n1 = strtol(argv[1], &endptr1, 10);
-n2 = strtol(argv[2], &endptr2, 10);
-if (*endptr1 != '\0' || *endptr2 != '\0')
-{
-printf("Error\n");
-return (1);
-}
-printf("%d\n", n1 * n2);
-
+x = atoi(argv[1]);
+y = atoi(argv[2]);
+printf("%d\n", x * y);
 
 return (0);
 }
