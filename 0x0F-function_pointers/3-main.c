@@ -1,6 +1,7 @@
 #include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
 * main - ...
@@ -25,6 +26,12 @@ if (!oprt)
 {
 printf("Error\n");
 exit(99);
+}
+
+if ((strcmp(argv[2], "/")) == 0 || strcmp(argv[2], "%") == 0) && atoi(argv[3]) == 0)
+{
+printf("Error\n");
+exit(100);
 }
 
 printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
