@@ -22,7 +22,7 @@ if (new->str == NULL)
 free(new);
 return (NULL);
 }
-new->len = _strlen(new->str);
+new->len = strlen(str);
 new->next = NULL;
 if (*head == NULL)
 {
