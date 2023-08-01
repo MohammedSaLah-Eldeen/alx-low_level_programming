@@ -9,7 +9,7 @@
 size_t print_listint(const listint_t *h)
 {
 size_t nodes = 0;
-const list_t *plist = h;
+const listint_t *plist = h;
 
 while (plist != NULL)
 {
