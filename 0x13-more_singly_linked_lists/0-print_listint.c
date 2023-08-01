@@ -8,17 +8,15 @@
 */
 size_t print_listint(const listint_t *h)
 {
-size_t nodes = 0;
-const listint_t *plist = h;
+size_t count = 0;
 
-if (plist == NULL)
-return (0);
-
-while (plist != NULL)
+while (h != NULL)
 {
-printf("%d\n", plist->n);
-nodes++;
-plist = plist->next;
+printf("%d\n", h->n);
+h = h->next;
+count++;
 }
-return (nodes);
+
+return (count);
+
 }
