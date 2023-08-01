@@ -15,7 +15,7 @@ int result = 0;
 while (head != NULL)
 {
 result += head->n;
-head = head->n;
+head = head->next;
 }
 return (result);
 }
