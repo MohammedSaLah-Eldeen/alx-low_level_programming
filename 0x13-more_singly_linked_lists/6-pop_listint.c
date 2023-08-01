@@ -12,7 +12,7 @@ int pop_listint(listint_t **head)
 int restored;
 listint_t* new_head;
 
-if (*head == NULL)
+if (*head == NULL || head == NULL)
 return (0);
 
 restored = (*head)->n;
