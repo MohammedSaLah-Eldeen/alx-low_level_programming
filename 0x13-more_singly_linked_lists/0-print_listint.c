@@ -13,7 +13,7 @@ const listint_t *plist = h;
 
 while (plist != NULL)
 {
-printf("%d\n", h->n);
+printf("%d\n", plist->n);
 nodes++;
 plist = plist->next;
 }
