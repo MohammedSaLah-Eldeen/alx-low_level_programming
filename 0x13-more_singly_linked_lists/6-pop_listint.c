@@ -9,18 +9,18 @@
 */
 int pop_listint(listint_t **head)
 {
-int restored;
-listint_t* new_head;
+int n;
+listint_t *new_head;
 
-if (*head == NULL || head == NULL)
+if (head == NULL || *head == NULL)
 return (0);
 
-restored = (*head)->n;
+n = (*head)->n;
 new_head = (*head)->next;
 
 free(*head);
 *head = new_head;
 
-return (restored);
+return (n);
 
 }
