@@ -1,31 +1,28 @@
 #include "main.h"
 
 /**
-* print_binary - prints the binary representation of a number
-* @n: num of prented
-* Return: void
+* print_binary - print binary representation of a number
+* @n: decimal number to print as binary
 */
 void print_binary(unsigned long int n)
 {
+unsigned long int temp;
+int shifts;
 
-unsigned long int n_reversed = 0;
-while (n)
+if (n == 0)
 {
-n_reversed <<= 1;
-if (n & 1)
-n_reversed += 1;
-
-n >>= 1;
+printf("0");
+return;
 }
 
-while (n_reversed)
+for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
+;
+
+for (; shifts >= 0; shifts--)
 {
-if (n_reversed & 1)
-_putchar('1');
+if ((n >> shifts) & 1)
+printf("1");
 else
-_putchar('0');
-
-n_reversed >>= 1;
+printf("0");
 }
-
 }
