@@ -9,7 +9,7 @@ int get_endianness(void)
 int num = 1;
 char *pnum = (char *)&num;
 
-if (*pnum)
+if (*pnum == 1)
 return (1);
 else
 return (0);
