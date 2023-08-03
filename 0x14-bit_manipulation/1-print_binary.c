@@ -7,12 +7,15 @@
 */
 void print_binary(unsigned long int n)
 {
-unsigned long int n_reversed;
+
+unsigned long int n_reversed = 0;
 while (n)
 {
 n_reversed <<= 1;
 if (n & 1)
 n_reversed += 1;
+
+n >>= 1;
 }
 
 while (n_reversed)
@@ -24,5 +27,5 @@ _putchar('0');
 
 n_reversed >>= 1;
 }
-_putchar('\n');
+
 }
