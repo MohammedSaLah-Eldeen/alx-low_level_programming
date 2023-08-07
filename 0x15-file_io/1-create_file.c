@@ -16,8 +16,8 @@ return (-1);
 
 if (text_content != NULL)
 {
-while (text_context[len])
-len++;
+while (text_content[strlen])
+strlen++;
 }
 
 file = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
