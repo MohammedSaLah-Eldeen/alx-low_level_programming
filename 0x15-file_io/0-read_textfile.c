@@ -27,7 +27,7 @@ if (buffer == NULL)
 return (0);
 
 num_letters = read(fd, buffer, letters);
-if (num_letters = -1)
+if (num_letters == -1)
 {
 free(buffer);
 return (0);
@@ -35,7 +35,7 @@ return (0);
 
 
 written_letters = write(STDOUT_FILENO, buffer, num_letters);
-if (written_letters = -1 || written_letters < num_letters)
+if (written_letters == -1 || written_letters < num_letters)
 {
 free(buffer);
 return (0);
