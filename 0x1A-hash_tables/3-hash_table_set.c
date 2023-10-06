@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
-* make_hash_node - creates a new hash node
+* create_new_node - creates a new hash node
 * @key: key for the node
 * @value: for the node
 *
@@ -43,6 +43,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 unsigned long int index;
 hash_node_t *new_node, *tmp;
+char *nvalue;
 
 if (ht == NULL || ht->array == NULL || ht->size == 0 ||
 key == NULL || strlen(key) == 0 || value == NULL)
