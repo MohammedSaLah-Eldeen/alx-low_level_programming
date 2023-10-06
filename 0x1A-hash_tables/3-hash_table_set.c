@@ -19,7 +19,7 @@ if (new_node->key == NULL)
 free(new_node);
 return (NULL);
 }
-new_node->value = strdup(value):
+new_node->value = strdup(value);
 if (new_node->value == NULL)
 {
 free(new_node->key);
