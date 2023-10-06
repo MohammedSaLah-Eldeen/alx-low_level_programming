@@ -10,7 +10,7 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
   unsigned long int index;
-  hash_node_t traverser;
+  hash_node_t *traverser;
 
   if (ht == NULL || ht->array == NULL || ht->size == 0 ||
       key == NULL || strlen(key) == 0)
@@ -18,7 +18,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
   index = key_index((const unsigned char *)key, ht->size);
   traverser = ht->array[index];
-  while (traveser != NULL)
+  while (traverser != NULL)
     {
       if (strcmp(traverser->key, key) == 0)
 	return (traverser->value);
