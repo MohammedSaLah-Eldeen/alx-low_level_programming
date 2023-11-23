@@ -1,8 +1,5 @@
 SRC = *.c
 CC = gcc
 
-school:
+all: $(SRC)
 	$(CC) $(SRC) -o school
-
-
-all: school
