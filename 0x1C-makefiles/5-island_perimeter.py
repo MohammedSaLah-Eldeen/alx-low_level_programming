@@ -38,3 +38,4 @@ def island_perimeter(grid):
                     perimeter += 1
                 if prev_piece == water_zone:
                     perimeter += 1
+    return perimeter
