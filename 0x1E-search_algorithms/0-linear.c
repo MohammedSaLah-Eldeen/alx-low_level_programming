@@ -21,7 +21,7 @@ for (idx = 0; idx < size; idx++)
 {
 printf("Value checked array[%lu] = [%d]", idx, array[idx]);
 if (value == array[idx])
-return (idx);
+return ((int)idx);
 }
 return (-1);
 }
